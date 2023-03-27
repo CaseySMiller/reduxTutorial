@@ -18,20 +18,20 @@ store.dispatch({ type: 'todos/todoAdded', payload: 'arrrr this be a todo' })
 store.dispatch({ type: 'todos/todoAdded', payload: 'arrrr this be another todo' })
 store.dispatch({ type: 'todos/todoAdded', payload: 'arrrr this be a third todo' })
 
-store.dispatch({ type: 'todos/todoToggled', payload: 0 })
-store.dispatch({ type: 'todos/todoToggled', payload: 1 })
+// store.dispatch({ type: 'todos/todoToggled', payload: 0 })
+// store.dispatch({ type: 'todos/todoToggled', payload: 1 })
 
-store.dispatch({ type: 'filters/statusFilterChanged', payload: "Active" })
+// store.dispatch({ type: 'filters/statusFilterChanged', payload: "Active" })
 
-store.dispatch({ 
-  type: 'filters/colorFilterChanged', 
-  payload: { color: 'red', changeType: 'added' }
-})
+// store.dispatch({ 
+//   type: 'filters/colorFilterChanged', 
+//   payload: { color: 'red', changeType: 'added' }
+// })
 
 //stop listening
 unsubscribe();
 
-store.dispatch({ type: 'todos/todoAdded', payload: 'bet this wont work' })
+// store.dispatch({ type: 'todos/todoAdded', payload: 'bet this wont work' })
 
 
 // ReactDOM.render(

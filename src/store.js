@@ -1,8 +1,11 @@
-import { createStore, compose } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from "./recucer";
-import { includeMeaningOfLife, sayHiOnDispatch } from "./exampleAddons/enhancers"
+import { print1, print2, print3 } from './exampleAddons/middleware'
 
-const composedEnhancer = compose(sayHiOnDispatch, includeMeaningOfLife)
+const composedEnhancer = composeWithDevTools(
+    applyMiddleware(print1, print2, print3)
+)
 
 const store = createStore(rootReducer, composedEnhancer)
 
